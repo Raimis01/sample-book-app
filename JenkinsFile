@@ -55,12 +55,13 @@ pipeline {
     }
 }
 
-win bat
-mac lin sh
+//win bat
+//mac lin sh
 
 def build(){
     echo 'Start to build node app'
     bat "ls"
+    bat "npm -v"
     bat "npm install"
 }
 def deploy(String env, int port){
