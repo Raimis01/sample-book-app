@@ -2,10 +2,41 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Build') {
             steps {
-                echo 'Hello World'
+                echo 'Start to build node app'
             }
         }
+        stage('Deploy to DEV') {
+            steps {
+                echo 'Start to deploy to DEV'
+            }
+        }
+        stage('Tests to DEV') {
+            steps {
+                echo 'Start to test on DEV'
+            }
+        }
+        stage('Deploy to STG') {
+            steps {
+                echo 'Start to deploy to STG'
+            }
+        }
+        stage('Tests to STG') {
+            steps {
+                echo 'Start to test on STG'
+            }
+        }
+        stage('Deploy to PROD') {
+            steps {
+                echo 'Start to deploy to PROD'
+            }
+        }
+        stage('Tests to PROD') {
+            steps {
+                echo 'Start to test on PROD'
+            }
+        }
+
     }
 }
