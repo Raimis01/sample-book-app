@@ -51,8 +51,13 @@ jobs:
     needs: [deploy-dev]
 
     steps:
-      - name: ... tests success ...
-        run: echo Start to test to dev ..
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/deploy
+        with:
+          # port: 2345
+          enviroment: 'dev'
+      # - name: ... tests success ...
+      #   run: echo Start to test to dev ..
   
 
   deploy-stg:
