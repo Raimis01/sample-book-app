@@ -22,26 +22,54 @@ jobs:
       - name: ... check node version ...
         run: node -v
 
-  tests:
-    name: tests
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: ... tests success ...
-        run: echo test success!
-  
-  deploy:
+  deploy-dev:
     name: deploy
     runs-on: ubuntu-latest
 
     steps:
       - name: ... deploy success ...
-        run: echo deploy success!
+        run: echo Start to deploy to dev ..
 
-  cleanup:
-    name: cleanup
+  tests-dev:
+    name: tests
     runs-on: ubuntu-latest
 
     steps:
-      - name: ... cleanup success ...
-        run: echo cleanup success!
+      - name: ... tests success ...
+        run: echo Start to test to dev ..
+  
+
+  deploy-stg:
+    name: deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ... deploy success ...
+        run: echo Start to deploy to stg ..
+
+  tests-stg:
+    name: tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ... tests success ...
+        run: echo Start to test to stg ..
+  
+
+  deploy-prd:
+    name: deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ... deploy success ...
+        run: echo Start to deploy to prd ..
+
+  tests-prd:
+    name: tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ... tests success ...
+        run: echo Start to test to prd ..
+  
+
