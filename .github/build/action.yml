@@ -1,0 +1,7 @@
+runs:
+  using: "composite"
+  steps:
+    - name: ... build success ...
+    run: echo Start to deploy to dev ..
+    - name: install dependencies
+    run: npm install
