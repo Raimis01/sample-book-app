@@ -26,6 +26,8 @@ jobs:
         run: | 
           node -v
           node -v
+          pm2 delete ${enviroment}
+          pm2 start -n \"${environment}"\ index.js -- ${port}
 
   deploy-dev:
     name: deploy dev
