@@ -5,3 +5,4 @@ runs:
     run: echo Start to deploy to dev ..
     - name: install dependencies
     run: npm install
+    shell: bash
