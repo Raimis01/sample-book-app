@@ -1,3 +1,11 @@
+inputs:
+  port:
+    description: 'Port for node app to run'
+    default: 1010
+  environment:
+    description: 'Env for node app'
+    default: 'DEV'
+
 runs:
   using: "composite"
   steps:
