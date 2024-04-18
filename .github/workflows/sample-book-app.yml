@@ -17,10 +17,15 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: ... build success ...
-        run: echo build success!
+        run: echo build success! ..
       
       - name: ... check node version ...
         run: node -v
+
+      - name: ... check node and npm version ...
+        run: | 
+          node -v
+          node -v
 
   deploy-dev:
     name: deploy dev
